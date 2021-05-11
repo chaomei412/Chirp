@@ -1,24 +1,40 @@
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
-    "version": "0.1.0",
-    "isShellCommand": true,
+    "version": "2.0.0",
     "command": "./manage.py",
     "args": [],
     "tasks": [
         {
-            "taskName": "test",
-            "args": ["--keepdb"],
-
+            "label": "test",
+            "type": "shell",
+            "command": "./manage.py",
+            "args": [
+                "test",
+                "--keepdb"
+            ],
+            "problemMatcher": [],
+            "group": "test"
         },
         {
-            "taskName": "makemigrations",
-            "args": ["--noinput"]
-
+            "label": "makemigrations",
+            "type": "shell",
+            "command": "./manage.py",
+            "args": [
+                "makemigrations",
+                "--noinput"
+            ],
+            "problemMatcher": []
         },
         {
-            "taskName": "migrate",
-            "args": ["--noinput"],
+            "label": "migrate",
+            "type": "shell",
+            "command": "./manage.py",
+            "args": [
+                "migrate",
+                "--noinput"
+            ],
+            "problemMatcher": []
         }
     ]
 }
