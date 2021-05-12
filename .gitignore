@@ -93,3 +93,5 @@ ENV/
 db.sqlite3
 
 chirp/media/*
+.vscode/tasks.json
+.vscode/*
